@@ -1,4 +1,5 @@
 import tasks
+import restaurarDB
 
 def show_menu():
     print("\nMenú Mysql")
@@ -21,23 +22,23 @@ def main():
         choice = input("Selecciona una opción: ")
 
         if choice == '1':
-            print("1")
+            tasks.addUser()
         elif choice == '2':
-            print("2")
+            tasks.updateUser()
         elif choice == '3':
-            print("3")
+            tasks.deleteUser()
         elif choice == '4':
-            print("4")            
+            tasks.addUser()            
         elif choice == '5':
             print("5")
         elif choice == '6':
-            print("6")
+            tasks.getUsers()
         elif choice == '7':
-            print("7")
+            tasks.getRoles()
         elif choice == '8':
-            print("8")
+            restaurarDB.respaldoBaseDatos()
         elif choice == '9':
-            print("9")
+            restaurarDB.restaurarBaseDatos()
         elif choice == '10':
             print("10")
         elif choice == '11':
