@@ -42,7 +42,7 @@ def respaldoBaseDatos():
         # else:
         #     print(f"Error al realizar el respaldo: {resultado.stderr.decode()}")
         
-        with open(f'F:/{archivo_respaldo}', 'w') as out:
+        with open(f'C:/Respaldosdb/{archivo_respaldo}', 'w') as out:
             subprocess.Popen(f'"C:/Program Files/MySQL/MySQL Workbench 8.0 CE/"mysqldump --user={usuario} --password={contrasena} --databases {nombre_base_datos}', shell=True, stdout=out)
     
     except subprocess.CalledProcessError as error:
@@ -61,7 +61,7 @@ def restaurarBaseDatos():
         usuario = input("Ingresa el nombre del usuario: ")
         contrasena = input("Ingresa la contraseña: ")
         archivo_respaldo = input("Ingrese el nombre para el archivo.sql(ubique el '.sql' al final): ")
-        subprocess.Popen(f'"C:/Program Files/MySQL/MySQL Workbench 8.0 CE/mysql" --user={usuario} --password={contrasena} < F:/{archivo_respaldo}', shell=True)
+        subprocess.Popen(f'"C:/Program Files/MySQL/MySQL Workbench 8.0 CE/mysql" --user={usuario} --password={contrasena} < C:/Respaldosdb/{archivo_respaldo}', shell=True)
         
         
     except subprocess.CalledProcessError as error:

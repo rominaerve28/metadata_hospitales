@@ -1,5 +1,6 @@
 import tasks
 import restaurarDB
+import reporte
 
 def show_menu():
     print("\nMenú Mysql")
@@ -28,7 +29,7 @@ def main():
         elif choice == '3':
             tasks.deleteUser()
         elif choice == '4':
-            tasks.addUser()            
+            print("4")
         elif choice == '5':
             print("5")
         elif choice == '6':
@@ -40,9 +41,9 @@ def main():
         elif choice == '9':
             restaurarDB.restaurarBaseDatos()
         elif choice == '10':
-            print("10")
+            reporte.listar()
         elif choice == '11':
-            print("11")            
+            tasks.procedimientosAlmacenados()
         elif choice == '12':
             print("Saliendo del Gestor de Tareas.")
             break
